@@ -1,4 +1,4 @@
-name = "prayer"
+name = "fwz"
 main = "worker/index.js"
 compatibility_date = "2026-05-26"
 

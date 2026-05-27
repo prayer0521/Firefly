@@ -38,7 +38,7 @@ collections:
       - { label: "已发布", field: "draft", pattern: false }
       - { label: "置顶", field: "pinned", pattern: true }
     view_groups:
-      - { label: "按年份", field: "published", pattern: "\d{4}" }
+      - { label: "按年份", field: "published", pattern: '\d{4}' }
       - { label: "按分类", field: "category" }
 
     fields:
@@ -89,6 +89,7 @@ collections:
       - label: "站点信息"
         name: "site"
         file: "src/data/settings.json"
+        format: json
         fields:
           - { label: "站点标题", name: "title", widget: "string" }
           - { label: "副标题", name: "subtitle", widget: "string", required: false }
@@ -104,6 +105,7 @@ collections:
       - label: "个人资料"
         name: "profile"
         file: "src/data/profile.json"
+        format: json
         fields:
           - { label: "头像路径", name: "avatar", widget: "string", hint: "如 assets/images/avatar.avif" }
           - { label: "名字", name: "name", widget: "string" }

@@ -36,6 +36,9 @@ jobs:
       - name: Build site
         run: pnpm run build
 
+      - name: Copy Cloudflare Functions to dist
+        run: cp -r functions dist/functions 2>/dev/null || echo "No functions directory, skipping"
+
       - name: Create .nojekyll file
         run: touch dist/.nojekyll
       

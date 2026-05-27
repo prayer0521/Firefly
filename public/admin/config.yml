@@ -1,0 +1,119 @@
+backend:
+  name: github
+  repo: prayer0521/Firefly
+  branch: master
+  base_url: https://prayer.venture0521.workers.dev
+  auth_endpoint: /api/oauth/auth
+
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+# 编辑器配置
+editor:
+  preview: true
+
+# 站点域名（用于生成绝对路径）
+site_url: https://prayer.venture0521.workers.dev
+
+# 语言设置
+locale: "zh_Hans"
+
+collections:
+  # ========== 文章集合 ==========
+  - name: "posts"
+    label: "文章"
+    label_singular: "文章"
+    description: "创建和编辑博客文章"
+    folder: "src/content/posts"
+    path: "{{slug}}/index"
+    create: true
+    extension: md
+    format: frontmatter
+    identifier_field: "slug"
+    summary: "{{title}} — {{published | date('YYYY-MM-DD')}}"
+    sortable_fields:
+      - { name: "published", direction: Descending }
+    view_filters:
+      - { label: "草稿", field: "draft", pattern: true }
+      - { label: "已发布", field: "draft", pattern: false }
+      - { label: "置顶", field: "pinned", pattern: true }
+    view_groups:
+      - { label: "按年份", field: "published", pattern: "\d{4}" }
+      - { label: "按分类", field: "category" }
+
+    fields:
+      - { label: "标题", name: "title", widget: "string", i18n: true }
+      - { label: "URL标识", name: "slug", widget: "string", hint: "英文/拼音标识，如 'hello-world'" }
+      - { label: "发布日期", name: "published", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "更新日期", name: "updated", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false }
+      - { label: "描述", name: "description", widget: "text", required: false }
+      - { label: "封面图片", name: "image", widget: "image", required: false, hint: "留空使用默认封面" }
+      - { label: "标签", name: "tags", widget: "list", default: [], hint: "每行一个标签" }
+      - { label: "分类", name: "category", widget: "string", required: false }
+      - { label: "置顶", name: "pinned", widget: "boolean", default: false }
+      - { label: "语言", name: "lang", widget: "select", required: false, options: ["", "zh_CN", "zh_TW", "en", "ja", "ru"] }
+      - { label: "允许评论", name: "comment", widget: "boolean", default: true }
+      - { label: "密码保护", name: "password", widget: "string", required: false, hint: "留空则不加密" }
+      - { label: "密码提示", name: "passwordHint", widget: "string", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  # ========== 页面内容 ==========
+  - name: "spec"
+    label: "页面内容"
+    description: "编辑关于、友链、留言板等独立页面"
+    files:
+      - label: "关于页面"
+        name: "about"
+        file: "src/content/spec/about.md"
+        fields:
+          - { label: "正文", name: "body", widget: "markdown" }
+
+      - label: "友链页面"
+        name: "friends"
+        file: "src/content/spec/friends.mdx"
+        fields:
+          - { label: "正文", name: "body", widget: "markdown" }
+
+      - label: "留言板页面"
+        name: "guestbook"
+        file: "src/content/spec/guestbook.md"
+        fields:
+          - { label: "正文", name: "body", widget: "markdown" }
+
+  # ========== 站点设置 ==========
+  - name: "settings"
+    label: "站点设置"
+    description: "修改站点标题、描述、主题等全局配置"
+    files:
+      - label: "站点信息"
+        name: "site"
+        file: "src/data/settings.json"
+        fields:
+          - { label: "站点标题", name: "title", widget: "string" }
+          - { label: "副标题", name: "subtitle", widget: "string", required: false }
+          - { label: "站点描述", name: "description", widget: "text" }
+          - { label: "站点URL", name: "siteUrl", widget: "string" }
+          - { label: "关键词", name: "keywords", widget: "list", default: [] }
+          - { label: "主题色相", name: "themeHue", widget: "number", value_type: "int", min: 0, max: 360, default: 165, hint: "0红 120绿 240蓝" }
+          - { label: "页面宽度", name: "pageWidth", widget: "number", value_type: "int", min: 60, max: 140, default: 100, hint: "单位 rem" }
+          - { label: "卡片边框", name: "cardBorder", widget: "boolean", default: true }
+          - { label: "显示最后修改时间", name: "showLastModified", widget: "boolean", default: true }
+          - { label: "站点开始日期", name: "siteStartDate", widget: "string", hint: "如 2025-05-26" }
+
+      - label: "个人资料"
+        name: "profile"
+        file: "src/data/profile.json"
+        fields:
+          - { label: "头像路径", name: "avatar", widget: "string", hint: "如 assets/images/avatar.avif" }
+          - { label: "名字", name: "name", widget: "string" }
+          - { label: "签名", name: "bio", widget: "string" }
+          - label: "社交链接"
+            name: "links"
+            widget: "list"
+            summary: "{{name}}: {{url}}"
+            fields:
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "图标代码", name: "icon", widget: "string", hint: "fa7-brands:github / fa7-solid:envelope" }
+              - { label: "链接地址", name: "url", widget: "string" }
+              - { label: "显示名称", name: "showName", widget: "boolean", default: false }

@@ -1,5 +1,6 @@
 import type { SiteConfig } from "@/types/config";
 import { fontConfig } from "./fontConfig";
+import userSettings from "@/data/settings.json";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru'。
@@ -7,31 +8,24 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Firefly",
+	title: userSettings.title,
 
 	// 站点副标题
-	subtitle: "",
+	subtitle: userSettings.subtitle,
 
 	// 站点 URL
-	site_url: "https://prayer.com",
+	site_url: userSettings.siteUrl,
 
 	// 站点描述
-	description: "记录成长，分享技术。",
+	description: userSettings.description,
 
 	// 站点关键词
-	keywords: [
-		"Firefly",
-		"Astro",
-		"博客",
-		"技术博客",
-		"prayer",
-		"记录成长",
-	],
+	keywords: userSettings.keywords,
 
 	// 主题色
 	themeColor: {
 		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		hue: 165,
+		hue: userSettings.themeHue,
 		// 是否对访问者隐藏主题色选择器
 		fixed: false,
 		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
@@ -41,12 +35,12 @@ export const siteConfig: SiteConfig = {
 	// 页面整体宽度（单位：rem）
 	// 数值越大可以让页面内容区域更宽
 	// 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
-	pageWidth: 100,
+	pageWidth: userSettings.pageWidth,
 
 	// 网站Card样式配置
 	card: {
 		// 是否开启卡片边框和阴影，开启后让网站更有立体感
-		border: true,
+		border: userSettings.cardBorder,
 		// 是否让卡片风格跟随主题色相
 		followTheme: false,
 	},
@@ -89,7 +83,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2025-05-26",
+	siteStartDate: userSettings.siteStartDate,
 
 	// 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
 	// 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换
@@ -102,7 +96,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	// 文章页底部的"上次编辑时间"卡片开关
-	showLastModified: true,
+	showLastModified: userSettings.showLastModified,
 
 	// 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
 	outdatedThreshold: 30,

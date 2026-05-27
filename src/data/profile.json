@@ -1,0 +1,11 @@
+{
+  "avatar": "assets/images/avatar.avif",
+  "name": "prayer",
+  "bio": "记录成长",
+  "links": [
+    { "name": "qq", "icon": "fa7-brands:qq", "url": "https://qm.qq.com/q/3025249664", "showName": false },
+    { "name": "GitHub", "icon": "fa7-brands:github", "url": "https://github.com/prayer0521", "showName": false },
+    { "name": "Email", "icon": "fa7-solid:envelope", "url": "mailto:venture0521@163.com", "showName": false },
+    { "name": "RSS", "icon": "fa7-solid:rss", "url": "/rss/", "showName": false }
+  ]
+}

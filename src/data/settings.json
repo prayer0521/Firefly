@@ -1,0 +1,12 @@
+{
+  "title": "Firefly",
+  "subtitle": "",
+  "description": "记录成长，分享技术。",
+  "siteUrl": "https://prayer.venture0521.workers.dev",
+  "keywords": ["Firefly", "Astro", "博客", "技术博客", "prayer", "记录成长"],
+  "themeHue": 165,
+  "pageWidth": 100,
+  "cardBorder": true,
+  "showLastModified": true,
+  "siteStartDate": "2025-05-26"
+}

@@ -1,5 +1,6 @@
 name = "prayer"
-compatibility_date = "2026-05-26" # 更为今日
+main = "worker/index.js"
+compatibility_date = "2026-05-26"
 
 [assets]
 directory = "./dist"

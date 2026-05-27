@@ -32,7 +32,7 @@ collections:
     identifier_field: "slug"
     summary: "{{title}} — {{published | date('YYYY-MM-DD')}}"
     sortable_fields:
-      - { name: "published", direction: Descending }
+      - "published"
     view_filters:
       - { label: "草稿", field: "draft", pattern: true }
       - { label: "已发布", field: "draft", pattern: false }

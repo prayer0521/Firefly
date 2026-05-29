@@ -5,9 +5,9 @@ description: agent做项目了
 image: ./images/firefly1.avif
 tags:
   - agent
-category: 博客指南
+category: agent
 draft: false
-slug: 学
+slug: agent项目
 updated: '2026-05-29'
 pinned: false
 comment: true

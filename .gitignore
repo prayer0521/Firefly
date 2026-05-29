@@ -26,6 +26,9 @@ package-lock.json
 bun.lockb
 yarn.lock
 
+# admin panel (local only)
+admin/
+
 # ide
 .idea
 *.iml

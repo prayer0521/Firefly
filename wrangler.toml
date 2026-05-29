@@ -1,0 +1,8 @@
+name= "prayer"
+compatibility_date="2026-05-21"
+
+[assets]
+directory="./dist"
+
+[vars]
+NODE_VERSION="22"

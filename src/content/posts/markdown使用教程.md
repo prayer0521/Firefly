@@ -1,18 +1,19 @@
 ---
 title: Markdown使用教程
 published: '2026-05-29'
-updated: ''
+updated: '2026-05-29'
 pinned: false
 description: Markdown语法简易教程
 image: ''
 tags:
   - 语法，简单
-category: ''
+category: 文章示例
 draft: false
 lang: ''
 comment: true
 password: ''
 passwordHint: ''
+slug: markdown使用教程
 ---
 <h1 style="text-align:center; font-family:Times New Roman; color:blue;">
   Markdown<span style="font-family:SimSun;">入门教程</span>

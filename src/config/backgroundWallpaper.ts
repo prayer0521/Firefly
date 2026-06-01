@@ -77,12 +77,29 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Silent Years, I Settle",
-				"From Fading Days, I Let Go",
-				"Amidst Quiet Waves, I Calm",
-				"Upon Gentle Truth, I Perceive",
-				"From Burdened Past, I Heal",
-				"In Peaceful Self, I Abide",
+				"黄色的树林里分出两条路",
+				"可惜我不能同时去涉足",
+				"我在那路口久久伫立",
+				"向着一条路极目望去",
+				"直到它消失在丛林深处",
+
+				"但我却选了另外一条路",
+				"它荒草萋萋，十分幽寂",
+				"显得更诱人、更美丽",
+				"虽然在这两条小路上",
+				"都很少留下旅人的足迹",
+
+				"那天清晨落叶满地",
+				"两条路都未经脚印污染",
+				"啊，留下一条路等改日再见",
+				"但我知道路径延绵无尽头",
+				"恐怕我难以再回返",
+
+				"也许多少年后在某个地方",
+				"我将轻声叹息把往事回顾",
+				"一片树林里分出两条路",
+				"而我选了人迹更少的一条",
+				"从此决定了我一生的道路",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",

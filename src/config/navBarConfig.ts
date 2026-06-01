@@ -66,21 +66,21 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		children: [
 			{
 				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
+				url: "https://github.com/prayer0521",
 				external: true,
 				icon: "fa7-brands:github",
 			},
 			{
-				name: "Gitee",
-				url: "https://gitee.com/CuteLeaf/Firefly",
+				name: "Leetcode",
+				url: "https://leetcode.cn/studyplan/top-100-liked/",
 				external: true,
-				icon: "fa7-brands:gitee",
+				icon: "fa7-brands:leetcode",
 			},
 			{
-				name: "QQ交流群",
-				url: "https://qm.qq.com/q/ZGsFa8qX2G",
+				name: "b站",
+				url: "https://www.bilibili.com/",
 				external: true,
-				icon: "fa7-brands:qq",
+				icon: "fa7-brands:bilibili",
 			},
 		],
 	});

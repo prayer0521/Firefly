@@ -1,5 +1,5 @@
 ---
-title: Top to Down学习法
+title: Top-Down学习法
 published: '2026-06-03'
 updated: '2026-06-03'
 pinned: true
@@ -13,7 +13,7 @@ lang: ''
 comment: true
 password: ''
 passwordHint: ''
-slug: top-to-down学习法
+slug: top-down学习法
 ---
 # Top to Down学习法
 **自顶向下学习法 = 目标驱动 × 按需学习 × 迭代深潜**
